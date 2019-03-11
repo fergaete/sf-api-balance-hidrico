@@ -1,0 +1,11 @@
+AppBundle\Entity\BaseEntity:
+    exclusion_policy: ALL
+    properties:
+        id:
+            expose: true
+        createdAt:
+            expose: true
+        updatedAt:
+            expose: true
+        deleted:
+            expose: false

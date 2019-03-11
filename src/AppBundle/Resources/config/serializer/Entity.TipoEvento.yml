@@ -1,0 +1,11 @@
+AppBundle\Entity\TipoEvento:
+    exclusion_policy: ALL
+    properties:
+        nombre:
+            expose: true
+    custom_accessor_order:
+        - id
+        - nombre
+        - createdAt
+        - updatedAt
+        - deleted

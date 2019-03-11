@@ -1,0 +1,20 @@
+AppBundle\Entity\EventoHidrico:
+  exclusion_policy: ALL
+  properties:
+    cantidad:
+      expose: true
+    observaciones:
+      expose: true
+    tipoEvento:
+      expose: true
+    fecha:
+      expose: true
+  custom_accessor_order:
+    - id
+    - tipoEvento
+    - cantidad
+    - fecha
+    - observaciones
+    - createdAt
+    - updatedAt
+    - deleted

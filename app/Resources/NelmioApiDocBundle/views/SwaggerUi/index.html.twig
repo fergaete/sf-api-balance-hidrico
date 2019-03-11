@@ -1,0 +1,18 @@
+{% extends '@!NelmioApiDoc/SwaggerUi/index.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        header:before {
+            background-color: #dcdcdc;
+        }
+        header #logo img {
+            background-color: #dcdcdc;
+        }
+        #swagger-ui.api-platform .info .title {
+            color: #000000;
+        }
+    </style>
+{% endblock stylesheets %}
+{% block header %}
+    <a id="logo" href="#"><img src="{{ asset('bundles/app/img/logo-rest.png') }}" alt="API RESTFul Balance Hídrico"></a>
+{% endblock header %}

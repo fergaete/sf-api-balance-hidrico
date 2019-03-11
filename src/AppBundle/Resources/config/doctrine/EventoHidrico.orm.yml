@@ -1,0 +1,38 @@
+AppBundle\Entity\EventoHidrico:
+  type: entity
+  table: evento_hidrico
+  repositoryClass: AppBundle\Repository\EventoHidricoRepository
+  id:
+    id:
+      type: integer
+      id: true
+      generator:
+        strategy: IDENTITY
+  fields:
+    cantidad:
+      type: integer
+    observaciones:
+      type: text
+      nullable: true
+    fecha:
+      type: datetime
+    createdAt:
+      type: datetime
+      column: created_at
+    updatedAt:
+      type: datetime
+      column: updated_at
+      nullable: true
+    deleted:
+      type: boolean
+      nullable: true
+  lifecycleCallbacks: {  }
+  manyToOne:
+    tipoEvento:
+      targetEntity: AppBundle\Entity\TipoEvento
+      inversedBy: eventoHidricos
+      cascade: [persist]
+      joinColumn:
+        name: id_tipo_evento
+        referencedColumnName: id
+        nullable: false

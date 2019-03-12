@@ -28,7 +28,7 @@ class EventoHidricoApiController extends BaseApiRestController {
     protected $formName = EventoHidricoType::class;
 
     /**
-     * @Rest\Get("/api/evento-hidrico")
+     * @Rest\Get("/api/evento-hidricos")
      * @SWG\Response(
      *     response=200,
      *     description="Devolución de colección de eventos hídricos.",
@@ -37,7 +37,7 @@ class EventoHidricoApiController extends BaseApiRestController {
      *         @SWG\Items(ref=@Model(type=EventoHidrico::class))
      *     )
      * )
-     * @SWG\Tag(name="evento-hidrico")
+     * @SWG\Tag(name="evento-hidricos")
      * @return \AppBundle\Entity\Collection\BaseCollection|array|View
      */
     public function cgetAction() {
@@ -45,7 +45,7 @@ class EventoHidricoApiController extends BaseApiRestController {
     }
 
     /**
-     * @Rest\Get("/api/evento-hidrico/{id}", requirements={"id"="\d+"})
+     * @Rest\Get("/api/evento-hidricos/{id}", requirements={"id"="\d+"})
      * @SWG\Response(
      *     response=200,
      *     description="Devolución de un evento hídrico.",
@@ -58,7 +58,7 @@ class EventoHidricoApiController extends BaseApiRestController {
      *     response=404,
      *     description="No existe el evento hídrico."
      * )
-     * @SWG\Tag(name="evento-hidrico")
+     * @SWG\Tag(name="evento-hidricos")
      * @param int $id
      * @return Response
      */
@@ -67,7 +67,7 @@ class EventoHidricoApiController extends BaseApiRestController {
     }
 
     /**
-     * @Rest\Post("/api/evento-hidrico")
+     * @Rest\Post("/api/evento-hidricos")
      * @SWG\Parameter(
      *     name="evento_hidrico",
      *     in="body",
@@ -86,7 +86,7 @@ class EventoHidricoApiController extends BaseApiRestController {
      *     response=400,
      *     description="No se pudo crear el evento hídrico."
      * )
-     * @SWG\Tag(name="evento-hidrico")
+     * @SWG\Tag(name="evento-hidricos")
      * @param Request $request
      * @return Response
      * @throws \Doctrine\ORM\OptimisticLockException
@@ -96,7 +96,7 @@ class EventoHidricoApiController extends BaseApiRestController {
     }
 
     /**
-     * @Rest\Put("/api/evento-hidrico/{id}", requirements={"id"="\d+"})
+     * @Rest\Put("/api/evento-hidricos/{id}", requirements={"id"="\d+"})
      * @SWG\Parameter(
      *     name="evento_hidrico",
      *     in="body",
@@ -115,7 +115,7 @@ class EventoHidricoApiController extends BaseApiRestController {
      *     response=400,
      *     description="No se pudo modificar el evento hídrico."
      * )
-     * @SWG\Tag(name="evento-hidrico")
+     * @SWG\Tag(name="evento-hidricos")
      * @param Request $request
      * @param int $id
      * @return Response
@@ -126,7 +126,7 @@ class EventoHidricoApiController extends BaseApiRestController {
     }
 
     /**
-     * @Rest\Delete("/api/evento-hidrico/{id}", requirements={"id"="\d+"})
+     * @Rest\Delete("/api/evento-hidricos/{id}", requirements={"id"="\d+"})
      * @SWG\Response(
      *     response=200,
      *     description="Evento hídrico eliminado."
@@ -135,7 +135,7 @@ class EventoHidricoApiController extends BaseApiRestController {
      *     response=404,
      *     description="No existe el evento hídrico."
      * )
-     * @SWG\Tag(name="evento-hidrico")
+     * @SWG\Tag(name="evento-hidricos")
      * @param int $id
      * @return Response
      * @throws \Doctrine\ORM\OptimisticLockException

@@ -3,9 +3,12 @@ AppBundle\Entity\TipoEvento:
     properties:
         nombre:
             expose: true
+        salida:
+            expose: true
     custom_accessor_order:
         - id
         - nombre
+        - salida
         - createdAt
         - updatedAt
         - deleted

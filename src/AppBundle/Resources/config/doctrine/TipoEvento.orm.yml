@@ -12,6 +12,11 @@ AppBundle\Entity\TipoEvento:
         nombre:
             type: string
             length: 255
+        salida:
+            type: boolean
+            nullable: true
+            options:
+                default: false
         createdAt:
             type: datetime
             column: created_at

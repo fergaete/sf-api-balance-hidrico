@@ -17,8 +17,11 @@ class TipoEventoFixtures extends Fixture {
      * @param ObjectManager $manager
      */
     public function load(ObjectManager $manager) {
-        foreach(TipoEventoCollection::getTipos() as $tipo) {
+        foreach(TipoEventoCollection::getTipos() as $index => $tipo) {
             $tipoEvento = TipoEvento::create($tipo);
+            if ($index == TipoEvento::ORINA) {
+                $tipoEvento->setSalida(true);
+            }
             $manager->persist($tipoEvento);
         }
         $manager->flush();

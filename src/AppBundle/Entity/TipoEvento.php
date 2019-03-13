@@ -35,6 +35,12 @@ class TipoEvento extends BaseEntity {
     private $eventoHidricos;
 
     /**
+     * @var boolean
+     * @SWG\Property(type="string", maxLength=255, description="Si es salida.")
+     */
+    private $salida = false;
+
+    /**
      * TipoEvento constructor.
      */
     public function __construct() {
@@ -97,6 +103,24 @@ class TipoEvento extends BaseEntity {
         foreach ($eventoHidricos as $eventoHidrico) {
             $this->addEventoHidrico($eventoHidrico);
         }
+        return $this;
+    }
+
+    /**
+     * Get salida
+     * @return bool
+     */
+    public function isSalida() {
+        return $this->salida;
+    }
+
+    /**
+     * Set salida
+     * @param bool $salida
+     * @return TipoEvento
+     */
+    public function setSalida($salida) {
+        $this->salida = (boolean) $salida;
         return $this;
     }
 }
